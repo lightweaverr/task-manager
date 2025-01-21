@@ -20,7 +20,7 @@ const TaskList = () => {
       description: 'Draft and submit the Q1 project proposal',
       priority: 1,
       status: 'pending',
-      completed: false
+    completed: false
     }
   ]);
 
