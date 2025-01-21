@@ -1,11 +1,12 @@
 'use client'
 import React, { useState } from 'react'
 import TaskCard from './TaskCard';
+import { Task } from '@/lib/types';
 
 const TaskList = () => {
 
 
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState<Task[]>([
     {
       id: '1',
       title: 'Complete Project Proposal',
@@ -30,6 +31,8 @@ const TaskList = () => {
         <TaskCard
           key={task.id}
           task={task}
+          onEdit={() => console.log('Edit Task')}
+          onComplete={() => console.log('Complete Task')}
         />
       ))}
     </div>

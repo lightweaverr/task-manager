@@ -1,18 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
+import { Task } from '@/lib/types';
 import {  Edit2, CheckCircle } from 'lucide-react';
 
-
-interface Task {
-  id: string;
-  title: string;
-  description?: string;
-  priority: 1 | 2 | 3 | 4 | 5;
-  status: 'pending' | 'finished';
-  completed: boolean;
-}
 interface TaskCardProps {
   task: Task;
   onEdit: (id: string) => void;
